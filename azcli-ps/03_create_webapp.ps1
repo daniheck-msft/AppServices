@@ -18,11 +18,34 @@ az group create --location $region --resource-group $rg
 # Deploy Web App including AppPlan
 #########################################
 az webapp up --location $region --name $webappname --resource-group $rg --plan $appplanname --html --sku F1 -b
-
 #show url of the webapp
 $url = az webapp show --name $webappname --resource-group $rg --query "defaultHostName" --output tsv
 #show webapp in chrome
 start chrome $url
+
+#########################################
+# Deploy ReactApp1 
+#########################################
+$ReactApp1="newReactApp1"
+$repourl="https://github.com/daniheck-msft/ReactApp1.git"
+az webapp create --name $ReactApp1 --resource-group $rg --plan $appplanname
+
+#az webapp deployment source config --name $ReactApp1 --resource-group $rg --repo-url $repourl --branch master --manual-integration
+start chrome "https://portal.azure.com" #manually configure deployment from github in Section Deployment Center 
+
+# sync from configured github repo
+az webapp deployment source sync --name $ReactApp1 --resource-group $rg
+
+az ad sp create-for-rbac --name ReactApp1 --role contributor --scopes /subscriptions/4e23649f-a275-494e-923f-4f56241e352e/resourceGroups/bc-AppServices --json-auth --only-show-errors
+az ad sp create-for-rbac --name ReactApp1 --role contributor --scopes /subscriptions/4e23649f-a275-494e-923f-4f56241e352e/resourceGroups/bc-AppServices --json-auth
+
+
+$url = az webapp show --name $ReactApp1 --resource-group $rg --query "defaultHostName" --output tsv
+echo $url
+#show webapp in chrome
+start chrome $url
+
+
 
 #update webapp
 az webapp up --location $region --name $webappname --resource-group $rg --plan $appplanname --html --sku F1 -b
