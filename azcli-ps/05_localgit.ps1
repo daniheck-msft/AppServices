@@ -42,6 +42,8 @@ echo $localgiturl
 git remote add azure $localgiturl
 # had to enable basic authentication in the web app over the portal in configuration->general settings->basic auth publishing credentials
 # otherwise you get fatal: Authentication failed for 'bla'
+# https://learn.microsoft.com/en-us/azure/app-service/configure-basic-auth-disable?tabs=cli#disable-basic-authentication
+# logischerweise das auf true setzen ... ;-) ... 
 az resource update --resource-group $rg --name scm --namespace Microsoft.Web `
     --resource-type basicPublishingCredentialsPolicies --parent sites/$webapp --set properties.allow=true
 
