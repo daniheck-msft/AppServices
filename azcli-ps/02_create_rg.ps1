@@ -1,4 +1,4 @@
-$rg="bc-AppServices"
+$rg="deleteme001"
 $region = "eastus"
 
 ###############################

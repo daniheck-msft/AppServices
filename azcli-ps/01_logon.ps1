@@ -3,6 +3,7 @@ az login
 
 $subscriptions = az account list --query '[].{Name:name, ID:id}' | ConvertFrom-Json
 $subscription = $subscriptions | Out-GridView -Title "Select Subscription" -PassThru
+echo "Selected subscription: $($subscription.Name)"
 az account set --subscription $subscription.ID
 
 az group list --output table
