@@ -1,7 +1,7 @@
 $rg="AppServices001"
 $region = "eastus"
 $webapp = "localgitwebapp0836"
-$appServicePlan = "WANetCoreRazor00120240116183905Plan"
+$appServicePlan = "WANetCoreRazorPlan"
 # https://learn.microsoft.com/en-us/azure/app-service/app-service-web-tutorial-rest-api
 
 # Clone the sample repository and change to the repository root.

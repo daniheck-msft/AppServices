@@ -10,14 +10,14 @@ az group list --output table
 
 #########################################
 
-# Log in to Azure using a pop-up window for interactive authentication
-Connect-AzAccount
+# # Log in to Azure using a pop-up window for interactive authentication
+# Connect-AzAccount
 
-# Select the subscription you want to use
-$subscription = (Get-AzSubscription | Out-GridView -Title "Select a Subscription" -PassThru)
-Set-AzContext -Subscription $subscription.Id
+# # Select the subscription you want to use
+# $subscription = (Get-AzSubscription | Out-GridView -Title "Select a Subscription" -PassThru)
+# Set-AzContext -Subscription $subscription.Id
 
-# Confirm the selected subscription
-Write-Host "Using Azure subscription: $($subscription.Name)" -ForegroundColor Green
+# # Confirm the selected subscription
+# Write-Host "Using Azure subscription: $($subscription.Name)" -ForegroundColor Green
 
 
