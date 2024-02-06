@@ -5,9 +5,10 @@ $subscriptions = az account list --query '[].{Name:name, ID:id}' | ConvertFrom-J
 $subscription = $subscriptions | Out-GridView -Title "Select Subscription" -PassThru
 echo "Selected subscription: $($subscription.Name)"
 az account set --subscription $subscription.ID
-
 az group list --output table
 
+#########################################
+# Powershell way to do this
 #########################################
 
 # # Log in to Azure using a pop-up window for interactive authentication

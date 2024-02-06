@@ -1,6 +1,5 @@
-# $rg="bc-AppServices002"
-# $region = "eastus"
-$webapp = "WebAppFromGitHub002"
+
+$webapp = $rg+"WAFromGH"+$uniqueId
 $appServicePlan = $appplanname 
 $tag="deploy-github.sh"
 $gitrepo="https://github.com/Azure-Samples/php-docs-hello-world" # Replace the following URL with your own public GitHub repo URL if you have one
