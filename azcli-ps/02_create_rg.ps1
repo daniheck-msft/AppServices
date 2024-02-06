@@ -1,4 +1,4 @@
-$rg="deleteme001"
+$rg="deleteme002"
 $region = "eastus"
 
 ###############################

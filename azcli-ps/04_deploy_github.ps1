@@ -1,7 +1,7 @@
-$rg="bc-AppServices"
-$region = "eastus"
-$webapp = "WebAppFromGitHub"
-$appServicePlan = "playAppPlan"
+# $rg="bc-AppServices002"
+# $region = "eastus"
+$webapp = "WebAppFromGitHub002"
+$appServicePlan = $appplanname 
 $tag="deploy-github.sh"
 $gitrepo="https://github.com/Azure-Samples/php-docs-hello-world" # Replace the following URL with your own public GitHub repo URL if you have one
 
@@ -9,6 +9,7 @@ $gitrepo="https://github.com/Azure-Samples/php-docs-hello-world" # Replace the f
 # az appservice plan create --name $appServicePlan --resource-group $resourceGroup --sku FREE
 
 # Create a web app.
+echo $appServicePlan
 az webapp create --name $webapp --resource-group $rg --plan $appServicePlan
 
 # Deploy code from a public GitHub repository. 
