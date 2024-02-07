@@ -1,8 +1,0 @@
-https://portal.azure.com/#view/HubsExtension/BrowseResourceGroups
-https://portal.azure.com/#@daniheck2.onmicrosoft.com/resource/subscriptions/cadcd582-e3b6-4e78-affe-96d03033b29c/resourceGroups/OldMSDNAppServices001/providers/Microsoft.Web/sites/OldMSDNYAASPdotNETHelloWorldApp001/vstscd
-https://oldmsdnyaaspdotnethelloworldapp001.azurewebsites.net/Account/Login?ReturnUrl=%2F
-https://danielheckmann.visualstudio.com/YAASP.NET%20Hello%20World%20App%20001/_build/results?buildId=31&view=logs&j=12f1170f-54f2-53f3-20dd-22fc7dff55f9&t=78db2542-c627-4140-8a7a-d06178fff4e4
-https://danielheckmann.visualstudio.com/YAASP.NET%20Hello%20World%20App%20001/_apps/hub/ms.vss-build-web.ci-designer-hub?pipelineId=5&branch=master
-https://learn.microsoft.com/en-us/azure/app-service/deploy-azure-pipelines?tabs=yaml
-https://learn.microsoft.com/en-us/azure/app-service/deploy-staging-slots?tabs=portal
-https://github.com/MicrosoftDocs/azure-devops-docs/issues/8360
